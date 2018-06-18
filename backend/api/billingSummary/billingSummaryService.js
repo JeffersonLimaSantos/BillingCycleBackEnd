@@ -6,7 +6,7 @@ function getSummay(req, res) {
     BillingCycle.aggregate([
         { 
             $project: { 
-                credit: { $sum: "$credts.value" }, 
+                credit: { $sum: "$credits.value" }, 
                 debt: { $sum: "$debts.value" } 
             }
         }, 
